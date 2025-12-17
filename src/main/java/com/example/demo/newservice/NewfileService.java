@@ -7,4 +7,5 @@ public interface NewfileService{
     Studententity  getidval(Long id)
     List<Studententity> getall();
     Studententity update( Long id,Studententity newfile);
+    void delete(Long id);
 }
