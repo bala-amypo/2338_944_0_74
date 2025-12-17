@@ -1,7 +1,7 @@
 package com.example.demo.newservice.newserviceimpl;
 
 public class Newfileseviceimpl implements Newfileservice{
-    private final Newfilerepo rep;
+    private final NewfileRepo rep;
     public Newfileservicempl(Newfilerepo rep){
         this.rep=rep;
     }
@@ -10,11 +10,11 @@ public class Newfileseviceimpl implements Newfileservice{
        return rep.save(new);
     }
     @Override
-    public Newentity getidval(Long id){
+    public getidval(Long id){
 
     }
     @Override
-    public List<Newentity>getall(){
+    public List<Studententity>getall(){
 
     }
     @Override
