@@ -15,25 +15,25 @@ public class Newcontroller {
     Studentservice src;
 
     @PostMapping("/post")
-    public Studententity postdata(@RequestBody Newentity new) {
+    public Studententity postdata(@RequestBody Studententity new) {
         return src.savedata(st);
     }
 
     @GetMapping("/get")
-    public List<Newentity> getdata() {
+    public List<Studententityy> getdata() {
         return src.retdata();
     }
 
     @GetMapping("/getid/{id}")
-    public Newentity getIdValue(@PathVariable Long id) {
+    public Studententity getIdValue(@PathVariable Long id) {
         return src.id(id);
     }
     @PutMapping("/update/{id}")
-    public Newentity putdata(@PathVariable Long id,@RequestBody Newentity new){
+    public Studententity putdata(@PathVariable Long id,@RequestBody Studententity new){
         return src.retputdata(id,new);
     }
     @DeleteMapping("/delete/{id}")
-    public Newentity deletedata(@PathVariable long id){
+    public Studententity deletedata(@PathVariable long id){
         return src.retdeldata(id);
     }
 
