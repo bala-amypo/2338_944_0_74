@@ -1,17 +1,32 @@
-package com.example.demo.Studententity;
+package com.example.demo.entity;
 
-public class Studententity {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-    private String name;
-    private String DOB;
+@Entity
+@Table(name = "student")
+public class StudentEntity {
+
+    @Id
     private int id;
+    private String name;
+    private String dob;
 
-    public Studententity() {
+    public StudentEntity() {
     }
 
-    public Studententity(String name, String DOB, int id) {
+    public StudentEntity(int id, String name, String dob) {
+        this.id = id;
         this.name = name;
-        this.DOB = DOB;
+        this.dob = dob;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -23,19 +38,11 @@ public class Studententity {
         this.name = name;
     }
 
-    public String getDOB() {
-        return DOB;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 }
